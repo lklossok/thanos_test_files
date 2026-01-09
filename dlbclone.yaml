@@ -32,15 +32,15 @@ lcr-modules:
             # Available wildcards: {model_name_prefix} {matrix_name} 
 
             # DLBCLone model storage
-            opt_model_path: "thanos_test_files/DLBCLone" # Default: "GAMBLR.predict", wherein stored models associated with the package GAMBLR.predict are used. For custom models built in rule _dlbclone_build_model, instead input appropriate path directory to your stored DLBCLone model(s).
+            opt_model_path: "/home/lklossok/thanos_test_files/DLBCLone" # Default: "GAMBLR.predict", wherein stored models associated with the package GAMBLR.predict are used. For custom models built in rule _dlbclone_build_model, instead input appropriate path directory to your stored DLBCLone model(s).
             model_name_prefix: "test1" # Name prefix DLBCLone model is denoted by. If using default GAMBLR.predict models, the following exist; "best_opt", "best_op_w", "lacy_opt_w", "lymphgen_opt", "lymphplex_opt_w", & "lyseq_opt_w".
             
             # This script from lcr-scripts will generate a saved and stored DLBCLone model
-            dlbclone_model: "lcr-scripts/dlbclone/1.0/dlbclone_model.R"
+            dlbclone_model: "/home/lklossok/lcr-scripts/dlbclone/1.0/dlbclone_model.R"
             # This script from lcr-scripts will assemble a test mutation matrix from maf and metadata files
             dlbclone_assemble_genetic_features: "lcr-scripts/dlbclone/1.0/dlbclone_assemble.R"
             # This script from lcr-scripts predicts DLBCL molecular subgroups for one or more samples using a pre-trained DLBCLone model
-            dlbclone_predict: "lcr-scripts/dlbclone/1.0/dlbclone_predict.R"
+            dlbclone_predict: "/home/lklossok/lcr-scripts/dlbclone/1.0/dlbclone_predict.R"
 
             # path to test metadata associated with the test maf file
             #test_metadata_dir: "/home/lklossok/Morin_Lab/DLBCLone/Modules/DLBCLone/data/metadata.tsv" 
@@ -48,11 +48,11 @@ lcr-modules:
             #test_maf_dir: "/home/lklossok/Morin_Lab/GAMBLR.predict/inst/extdata/lyseq_validation/LySeqST_merged_unaugmented_vaf.maf" 
 
             # path to test mutation matrix
-            test_matrix_dir: "thanos_test_files/DLBCLone/data" #"/home/lklossok/Morin_Lab/DLBCLone/Modules/DLBCLone/data/test1.tsv" 
+            test_matrix_dir: "/home/lklossok/thanos_test_files/DLBCLone/data" #"/home/lklossok/Morin_Lab/DLBCLone/Modules/DLBCLone/data/test1.tsv" 
             # test mutation matrix name
             matrix_name: "test1"
             # path to folder to store DLBCLone predictions tsv file(s)
-            pred_dir: "thanos_test_files/DLBCLone/data" #"/home/lklossok/Morin_Lab/DLBCLone/Modules/DLBCLone/data" 
+            pred_dir: "/home/lklossok/thanos_test_files/DLBCLone/data" #"/home/lklossok/Morin_Lab/DLBCLone/Modules/DLBCLone/data" 
 
             # Uncomment the following line to add a launch_date. Otherwise the current year-month will be used
             # launch_date: ""
@@ -112,3 +112,4 @@ lcr-modules:
             genome:
                 run_paired_tumours: False # TRICKING 'SAMPLES'
                 run_unpaired_tumours_with: "no_normal" # TRICKING 'SAMPLES'
+                

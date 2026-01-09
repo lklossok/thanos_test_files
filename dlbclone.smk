@@ -13,13 +13,13 @@ config["pipeline_name"] = "dlbclone"
 include: "header_2.1.smk"
 
 ##### REFERENCE_FILES WORKFLOW #####
-subworkflow reference_files:
+#subworkflow reference_files:
    # workdir:
     #    "../../ref/lcr-modules-references/"
-    snakefile:
-        "lcr-modules/workflows/reference_files/2.4/reference_files.smk"
-    configfile:
-        "lcr-modules/workflows/reference_files/2.4/config/default.yaml"
+ #   snakefile:
+  #      "lcr-modules/workflows/reference_files/2.4/reference_files.smk"
+   # configfile:
+    #    "lcr-modules/workflows/reference_files/2.4/config/default.yaml"
 
 ##### CONFIGURATION FILES #####
 
@@ -47,6 +47,8 @@ rule all:
 
 # dry run
 # ./snakemake.local.sh src/snakemake/dlbclone.smk all gambl "-np --use-conda --conda-frontend conda"
+
+# snakemake -s dlbclone.smk all gambl -np --use-conda --conda-frontend conda
 
 # full run
 # ./snakemake.local.sh src/snakemake/dlbclone.smk all gambl "--use-conda --conda-frontend conda"

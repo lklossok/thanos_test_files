@@ -7,10 +7,10 @@ SAMPLES = op.load_samples("lcr-modules/demo/data/samples.tsv")
 GENOME = op.filter_samples(SAMPLES, seq_type = "genome")
 
 ##### SETUP VARIABLES #####
-config["tool_names"] = "dlbclone"
-config["pipeline_name"] = "dlbclone"
+#config["tool_names"] = "dlbclone"
+#config["pipeline_name"] = "dlbclone"
 
-include: "header_2.1.smk"
+#include: "header_2.1.smk"
 
 ##### REFERENCE_FILES WORKFLOW #####
 #subworkflow reference_files:
